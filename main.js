@@ -1,11 +1,17 @@
 /// <reference types='jquery' />
 
 let $table = $('table');
+const $inputFecha = document.querySelector('#fecha');
 
 document.querySelector('button').onclick = function (){
+  eliminarBordeRojo()
   resetearTabla()
   const $moneda = document.querySelector('#bases').value;
   const $fecha = document.querySelector('#fecha').value;
+  if ($fecha == ""){
+    $inputFecha.classList.add('borde-rojo')
+    return ''
+  }
   fetch(`https://api.ratesapi.io/api/${$fecha}?base=${$moneda}`)
     .then(response => response.json())
     .then(data =>{
@@ -20,3 +26,6 @@ function resetearTabla(){
   $table.find("tr:gt(0)").remove();
 }
 
+function eliminarBordeRojo(){
+  $inputFecha.classList.remove("borde-rojo");
+}
