@@ -4,7 +4,7 @@
   "description": "web de consulta de tipo de cambios",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress-dev": "cypress-open"
   },
   "repository": {
     "type": "git",
