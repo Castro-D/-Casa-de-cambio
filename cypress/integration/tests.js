@@ -36,4 +36,9 @@ context('casa de cambio', () => {
         cy.contains('Buscar').click();
         cy.get('table').find('tr').should('have.length', '34');
     });
+
+    it('chequea si no se agrega la tabla cuando no se agrega la fecha', () => {
+        cy.visit(URL);
+        cy.get('table').find('tr').should('have.length', '1'); // solo se ve la cabecera de tabla
+    });
 });
