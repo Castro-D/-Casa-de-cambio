@@ -5,4 +5,15 @@
 body {
     background: url(./fondo.jpg) no-repeat center center fixed;
     background-size: cover;
-   }
+}
+
+.color-azul {
+    color: rgb(8, 61, 119);  
+}
+
+.boton-azul {
+    background-color: rgb(8, 61, 119);
+}
+.letra-blanca {
+    color: white;
+}
