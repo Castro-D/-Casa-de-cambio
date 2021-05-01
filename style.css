@@ -1,3 +1,8 @@
 .borde-rojo {
     border: red 1px solid;
 }
+
+body {
+    background: url(./fondo.jpg) no-repeat center center fixed;
+    background-size: cover;
+   }
