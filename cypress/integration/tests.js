@@ -39,6 +39,13 @@ context('casa de cambio', () => {
 
     it('chequea si no se agrega la tabla cuando no se agrega la fecha', () => {
         cy.visit(URL);
+        cy.contains('Buscar').click();
         cy.get('table').find('tr').should('have.length', '1'); // solo se ve la cabecera de tabla
+    });
+    
+    it('confirma que la tabla es la misma al clickear buscar dos veces', () => {
+        cy.get('#fecha').type('2010-10-29');
+        cy.contains('Buscar').dblclick();
+        cy.get('table').find('tr').should('have.length', '34');
     });
 });
